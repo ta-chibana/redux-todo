@@ -15,7 +15,7 @@ TodoList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       completed: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired
+      title: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
   onTodoClick: PropTypes.func.isRequired

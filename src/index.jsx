@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import { Route, BrowserRouter } from 'react-router-dom'
 import todoApp from './reducers'
 import App from './components/App'
+import TodoDetail from './containers/TodoDetail'
 
 const store = createStore(
   todoApp,
@@ -14,8 +15,10 @@ const store = createStore(
 render(
   <Provider store={store}>
     <BrowserRouter>
-      <Route exact path="/" component={App}>
-      </Route>
+      <div>
+        <Route exact path="/" component={App} />
+        <Route path="/todos/:id" component={TodoDetail} />
+      </div>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
