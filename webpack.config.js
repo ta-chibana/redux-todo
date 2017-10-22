@@ -14,6 +14,13 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: path.resolve(__dirname, 'node-modules')
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+        ]
       }
     ]
   },
